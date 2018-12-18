@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title> Dashboard Zoo</title>
+        <link rel="stylesheet" href="./../bibliotecas/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+        <link rel="stylesheet" href="./../css/sb-admin.min.css">
+        <link rel="stylesheet" href="./../css/Style/dashboard.css">
+    </head>
+    <body class="bg-dark fixed-nav sticky-footer" id="page-top">
+        <!-- Navegação -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+            <a class="navbar-brand" href="./../index.html"> <i class="fas fa-home"></i> Home </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+            data-target="#navbarCurso" aria-controle="navbarCurso" aria-expanded="false" aria-label="Navegação Toggler">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div id="navbarCurso" class="collapse navbar-collapse">
+                <!-- OPÇÕES DA SIDE BAR -->
+                <ul class="navbar-nav navbar-sidenav" id="linksAccordion">
+                    <li class="nav-item" >
+                        <a class="nav-link" href="./estatisticas.html">
+                                <i class="fas fa-chart-line"></i>
+                            <span class="nav-link-text"> Estatisticas </span>
+                        </a>
+                    </li>
+                    <!-- PARTE DOS ANIMAIS -->
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-collapse collapse" href="#opcoesAnimais"
+                        data-toggle="collapse" data-parent="#linksAccordion">
+                            <i class="fa fa-fw fa-paw"></i>
+                            <span class="nav-link-text"> Animais </span>
+                        </a>
+                        <ul class="sidenav-second-level collapse" id="opcoesAnimais">
+                            <li>
+                                <a href="./cadastroAnimal.html"> <i class="fa fa-fw fa-edit"></i> Cadastrar </a>
+                            </li>
+                            <li>
+                                <a href="./listarAnimal.html"> <i class="fa fa-fw fa-list-ul"></i> Listar</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- PARTE DAS SEÇÕES -->
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-collapse collapse" href="#opcoesSecoes"
+                        data-toggle="collapse" data-parent="#linksAccordion">
+                            <i class="fas fa-landmark"></i>
+                            <span class="nav-link-text"> Seções </span>
+                        </a>
+                        <ul class="sidenav-second-level collapse" id="opcoesSecoes">
+                            <li>
+                                <a href="./cadastroSecao.html"> <i class="fa fa-fw fa-edit"></i> Cadastrar </a>
+                            </li>
+                            <li>
+                                <a href="./listarSecao.html"> <i class="fa fa-fw fa-list-ul"></i> Listar </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- PARTE DAS NOTICIAS -->
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-collapse collapse" href="#opcoesNoticias"
+                        data-toggle="collapse" data-parent="#linksAccordion">
+                            <i class="far fa-newspaper"></i>
+                            <span class="nav-link-text"> Notícias </span>
+                        </a>
+                        <ul class="sidenav-second-level collapse" id="opcoesNoticias">
+                            <li>
+                                <a href="./novaNoticia.html"><i class="fas fa-plus-circle"></i> Nova notícia </a>
+                            </li>
+                            <li>
+                                <a href="./listarNoticia.html"> <i class="fa fa-fw fa-list-ol"></i> Listar Notícias </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- PARTE DOS EVENTOS -->
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-collapse collapse" href="#opcoesEventos"
+                        data-toggle="collapse" data-parent="#linksAccordion">
+                            <i class="fas fa-calendar-day"></i>
+                            <span class="nav-link-text"> Eventos </span>
+                        </a>
+                        <ul class="sidenav-second-level collapse" id="opcoesEventos">
+                            <li>
+                                <a href="./novoEvento.html"><i class="fas fa-plus-circle"></i> Novo evento </a>
+                            </li>
+                            <li>
+                                <a href="./listarEvento.html"> <i class="fa fa-fw fa-list-ol"></i> Listar eventos </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- PARTE DO CONTROLE DE MEMBROS -->
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-collapse collapse" href="#opcoesMembros"
+                        data-toggle="collapse" data-parent="#linksAccordion">
+                            <i class="fas fa-users"></i>
+                            <span class="nav-link-text"> Controle de Membros </span>
+                        </a>
+                        <ul class="sidenav-second-level collapse" id="opcoesMembros">
+                            <li>
+                                <a href="./novoMembro.html"><i class="fas fa-plus-circle"></i> Novo membro </a>
+                            </li>
+                            <li>
+                                <a href="./listarMembro.html"> <i class="fa fa-fw fa-list-ol"></i> Listar membros </a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+                <!-- FECHAR SIDEBAR -->
+                <ul class="navbar-nav sidenav-toggler">
+                    <li class="nav-item">
+                        <a href="" class="nav-link text-center" id="sidenavToggler">
+                            <i class="fa fa-fw fa-angle-left"></i>
+                        </a>
+                    </li>
+                </ul>
+                <!-- PESQUISAR -->
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <form action="" class="form-inline my-2 my-lg-0 mr-l2-2">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Pesquisar...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-primary" type="button">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </span>
+                            </div>
+                        </form>
+                    </li>
+                    <!-- BOTÃO DE LOGOUT -->
+                    <li class="nav-item">
+                        <a href="" class="nav-link">
+                            <i class="fa fa-sign-out"> Logout</i>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+        <!-- CONTEUDO DA PÁGINA -->
+        <div class="content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                        <h1> CADASTRO SEÇÃO   </h1>
+                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde est nobis vitae molestiae culpa at ipsum fugit, distinctio suscipit blanditiis aperiam possimus eum impedit, neque quaerat? Illo non corporis sapiente? </p>
+                    </div>
+                </div>
+            </div>
+            <footer class="sticky-footer">
+                <div class="container">
+                    <div class="text-center">
+                        <small> Desenvolvido por Leonardo Oliveira </small>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <script src="./../bibliotecas/jquery/jquery.min.js"></script>
+        <script src="./../bibliotecas/jquery-easing/jquery.easing.min.js"></script>
+        <script src="./../bibliotecas/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="./../js/sb-admin.min.js"></script>
+    </body>
+</html>
